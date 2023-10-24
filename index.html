@@ -173,15 +173,19 @@
             location.reload();
           }
         });
-      };
 
-      let inputbox = document.querySelector(".webchat__send-box-text-box__input");
+ let inputbox = document.querySelector(".webchat__send-box-text-box__input");
         inputbox.addEventListener("keyup", function (event) {
           if (event.key === "Enter") { 
             alert("You pressed Enter. You typed: " + inputbox.value);
             inputbox.value = ""; // Clear the input field after displaying the alert
           }
         });
+
+        
+      };
+
+     
 
     </script>
   </head>
