@@ -3,171 +3,178 @@
   <head>
     <title>Canopy</title>
     <style>
-           :root {
-              --hovercolor: #e2e2e2;
-
-            }
-
-            html,
-            body {
-              height: 100%;
-            }
-
-            body {
-              margin: 0;
-            }
-
-            h1 {
-              font-size: 24px;
-              font-family: Segoe UI;
-
-              line-height: 20px;
-              color: whitesmoke;
-              display: table-cell;
-              padding: 0px 0px 0px 20px;
-            }
-            p{
-                /* font-size: 1.2rem !important; */
-                font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif !important;
-            }
-            li p{
-                margin:0;
-            }
-
-            #heading {
-              background-color: #2e475d;
-              height: 65px;
-              position:relative;
-              z-index: 1 !important;
-              border-radius: 10px 10px 0 0;
-              display: flex;
-              align-items: center;
-              justify-content: space-between;
-            }
-             .markdown img:not(.webchat__markdown__external-link-icon) {
-              max-width: 480px !important;
-              object-fit:contain !important;
-              height: 200px;
-              position: relative;
-              left: 50%;
-              transform: translateX(-50%);
-            }
-            .refresh-btn{
-              width: 2.3rem;
-              height: 2.3rem;
-              background-color: white !important;
-              color:black !important;
-              font-size: large;
-              border-radius: 20px;
-              margin-right: 15px;
-            }
-
-            .main {
-              margin: 18px;
-              border-radius: 4px;
-            }
-
-            div[role="form"] {
-              background-color: #dae8f3;
-            }
-
-            #webchat {
-              position: fixed;
-              height: calc(100% - 50px);
-              width: 100%;
-              top: 50px;
-              overflow: hidden;
-
-              width: calc(100% - 0px)!important;
-              right: 0;
-            }
-           .elementor-kit-8 button{
-                padding: 0!important;
-            }
-            .elementor-widget-wrap {
-                  padding: 0!important;
-            }
-
-           .reload {
-                font-family: Lucida Sans Unicode
-           }
-           .ac-selectable:hover {
-               background: var(--hovercolor);
-           }
-
-                .ac-textBlock> p {
-                      color: #000;
-                      margin-bottom: 6px!important;
-                  }
-             div.ac-input > div  {
-                  margin-bottom: 8px!important;
-                  align-items: start!important;
-              }
-             div.ac-input > div > input[type="checkbox"] {
-                  margin-top: 3px!important;
-              }
-              .webchat__adaptive-card-renderer .ac-pushButton{
-                  padding: 10px 20px!important;
-                  background-color:#3b5998!important;
-                  color:#fff!important;
-                  transition: .6s ease all;
-                  -webkit-transition: .6s ease all;
-              }
-              .webchat__adaptive-card-renderer .ac-pushButton:hover{
-                  padding: 10px 20px!important;
-                  background-color:#fff!important;
-                  color:#003e6b!important;
-                  border-color:#003e6b!important;
-                  transition: .6s ease all;
-                  -webkit-transition: .6s ease all;
-              }
-              p img {
-              max-width: 100% !important;
-              position: relative;
-              left: 50%;
-              transform: translateX(-50%);
-      }
-      img.emoji{
-          left:inherit!important;
-          transform:none!important;
-      }
-              .webchat__send-box-text-box > input{
-                  font-size:1.3em !important;
-              }
-
-     
-
-      @media(max-width:200px){
-           h1 {
-              font-size: 1em !important;
-      }
-  
-       .webchat__send-box-text-box > input{
-                  font-size:1em !important;
-      }
-      }
-      @media(min-width:280px){
-           h1 {
-              font-size: 1.2em !important;
+      :root {
+        --hovercolor: #e2e2e2;
       }
 
-       .webchat__send-box-text-box > input{
-                  font-size:1em !important;
-      }
+      html,
+      body {
+        height: 100%;
       }
 
-      @media(min-width:400px){
-           h1 {
-              font-size: 1.2em !important;
+      body {
+        margin: 0;
       }
- t__send-box-text-box > input{
-                  font-size:1.2em !important;
+
+      h1 {
+        font-size: 24px;
+        font-family: Segoe UI;
+
+        line-height: 20px;
+        color: whitesmoke;
+        display: table-cell;
+        padding: 0px 0px 0px 20px;
       }
+      p {
+        /* font-size: 1.2rem !important; */
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif !important;
+      }
+      li p {
+        margin: 0;
+      }
+
+      #heading {
+        background-color: #2e475d;
+        height: 65px;
+        position: relative;
+        z-index: 1 !important;
+        border-radius: 10px 10px 0 0;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
+      .markdown img:not(.webchat__markdown__external-link-icon) {
+        max-width: 480px !important;
+        object-fit: contain !important;
+        height: 200px;
+        position: relative;
+        left: 50%;
+        transform: translateX(-50%);
+      }
+      .refresh-btn {
+        width: 2.3rem;
+        height: 2.3rem;
+        background-color: white !important;
+        color: black !important;
+        font-size: large;
+        border-radius: 20px;
+        margin-right: 15px;
+      }
+
+      .main {
+        margin: 18px;
+        border-radius: 4px;
+      }
+
+      div[role="form"] {
+        background-color: #dae8f3;
+      }
+
+      #webchat {
+        position: fixed;
+        height: calc(100% - 50px);
+        width: 100%;
+        top: 50px;
+        overflow: hidden;
+
+        width: calc(100% - 0px) !important;
+        right: 0;
+      }
+      .elementor-kit-8 button {
+        padding: 0 !important;
+      }
+      .elementor-widget-wrap {
+        padding: 0 !important;
+      }
+
+      .reload {
+        font-family: Lucida Sans Unicode;
+      }
+      .ac-selectable:hover {
+        background: var(--hovercolor);
+      }
+
+      .ac-textBlock > p {
+        color: #000;
+        margin-bottom: 6px !important;
+      }
+      div.ac-input > div {
+        margin-bottom: 8px !important;
+        align-items: start !important;
+      }
+      div.ac-input > div > input[type="checkbox"] {
+        margin-top: 3px !important;
+      }
+      .webchat__adaptive-card-renderer .ac-pushButton {
+        padding: 10px 20px !important;
+        background-color: #3b5998 !important;
+        color: #fff !important;
+        transition: 0.6s ease all;
+        -webkit-transition: 0.6s ease all;
+      }
+      .webchat__adaptive-card-renderer .ac-pushButton:hover {
+        padding: 10px 20px !important;
+        background-color: #fff !important;
+        color: #003e6b !important;
+        border-color: #003e6b !important;
+        transition: 0.6s ease all;
+        -webkit-transition: 0.6s ease all;
+      }
+      p img {
+        max-width: 100% !important;
+        position: relative;
+        left: 50%;
+        transform: translateX(-50%);
+      }
+      img.emoji {
+        left: inherit !important;
+        transform: none !important;
+      }
+      .webchat__send-box-text-box > input {
+        font-size: 1.3em !important;
+      }
+
+      @media (max-width: 200px) {
+        h1 {
+          font-size: 1em !important;
+        }
+
+        .webchat__send-box-text-box > input {
+          font-size: 1em !important;
+        }
+      }
+      @media (min-width: 280px) {
+        h1 {
+          font-size: 1.2em !important;
+        }
+
+        .webchat__send-box-text-box > input {
+          font-size: 1em !important;
+        }
+      }
+
+      @media (min-width: 400px) {
+        h1 {
+          font-size: 1.2em !important;
+        }
+        t__send-box-text-box > input {
+          font-size: 1.2em !important;
+        }
       }
     </style>
     <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
     <script>
       window.onload = () => {
+        let inputbox = document.querySelector(
+          ".webchat__send-box-text-box__input"
+        );
+        inputbox.addEventListener("keyup", function (event) {
+          if (event.key === "Enter") {
+            alert("You pressed Enter. You typed: " + inputbox.value);
+            inputbox.value = ""; // Clear the input field after displaying the alert
+          }
+        });
+
         let reloadBtn = document.getElementsByClassName("refresh-btn");
         reloadBtn[0].addEventListener("click", function () {
           let confirmReload = confirm("Are you sure you want to reload?");
@@ -183,7 +190,7 @@
       <div class="heading" id="heading">
         <!-- Change the h1 text to change the bot name -->
         <h1>Canopy Health Virtual Assistant</h1>
-        
+
         <button class="refresh-btn">
           <span title="Restart Conversation" class="reload">&#x21bb;</span>
         </button>
@@ -229,12 +236,11 @@
         emojiSet: true,
       };
 
-     
       var queryString = window.location.search;
       var urlParams = new URLSearchParams(queryString);
-      var userHealthPlanCenter = urlParams.get("userHealthPlanCenter")
-      var userHealthPlan = urlParams.get("userHealthPlan")
-   
+      var userHealthPlanCenter = urlParams.get("userHealthPlanCenter");
+      var userHealthPlan = urlParams.get("userHealthPlan");
+
       var theURL =
         "https://01cd81792538eb60922a90f59fb61c.11.environment.api.powerplatform.com/powervirtualagents/botsbyschema/new_bot_ed427924bebc4587b4412d317866704c/directline/token?api-version=2022-03-01-preview";
       var environmentEndPoint = theURL.slice(
@@ -256,49 +262,46 @@
         })
         .catch((err) => console.error("An error occurred: " + err));
 
-        //creating store 
-        const store = window.WebChat.createStore(
-  {},
-  ({ dispatch }) =>
-            (next) =>
-              (action) => {
-                if (action.type === "DIRECT_LINE/CONNECT_FULFILLED") {
-
-                  new Promise(function (resolve) {
-                    dispatch({
-                      type: 'WEB_CHAT/SEND_EVENT',
-                      payload: {
-                        name: 'pvaSetContext',
-                        value: {
-                          "userHealthPlan": `${userHealthPlan}`,
-                          "userHealthPlanCenter": `${userHealthPlanCenter}`
-                        }
-                      }
-                    })
-                    setTimeout(() => resolve(1), 1000);
-                  }).then(function (result) {
-                    dispatch({
-                      meta: {
-                        method: "keyboard"
+      //creating store
+      const store = window.WebChat.createStore(
+        {},
+        ({ dispatch }) =>
+          (next) =>
+          (action) => {
+            if (action.type === "DIRECT_LINE/CONNECT_FULFILLED") {
+              new Promise(function (resolve) {
+                dispatch({
+                  type: "WEB_CHAT/SEND_EVENT",
+                  payload: {
+                    name: "pvaSetContext",
+                    value: {
+                      userHealthPlan: `${userHealthPlan}`,
+                      userHealthPlanCenter: `${userHealthPlanCenter}`,
+                    },
+                  },
+                });
+                setTimeout(() => resolve(1), 1000);
+              }).then(function (result) {
+                dispatch({
+                  meta: {
+                    method: "keyboard",
+                  },
+                  payload: {
+                    activity: {
+                      channelData: {
+                        postBack: true,
                       },
-                      payload: {
-                        activity: {
-                          channelData: {
-                            postBack: true
-                          },
-                          name: "startConversation",
-                          type: "event"
-                        },
-                      },
-                      type: "DIRECT_LINE/POST_ACTIVITY"
-                    });
-                  });
-
-       
-      }
-      return next(action);
-    }
-);
+                      name: "startConversation",
+                      type: "event",
+                    },
+                  },
+                  type: "DIRECT_LINE/POST_ACTIVITY",
+                });
+              });
+            }
+            return next(action);
+          }
+      );
 
       fetch(theURL)
         .then((response) => response.json())
@@ -341,15 +344,12 @@
           // adding a click event listener to the stars to light up when rating is given.
           $(".ac-selectable").on("click", function () {
             let index = $(this).attr("alt");
-            
 
             if (index === undefined) {
               if (
                 $(this).attr("type") === "button" &&
                 $(this).parent().attr("class") === "ac-actionSet"
               ) {
-                
-
                 // turning off event listeners for the stars
 
                 $(".ac-selectable").off();
@@ -362,11 +362,10 @@
                     .each(function () {
                       $(this).attr("disabled", "true");
                     });
-                 
+
                   //deleting submit button
 
                   if ($(this).attr("title") == "Submit") {
-                    
                     $(this).remove();
                   }
                 }, 1000);
@@ -374,7 +373,6 @@
             } else {
               for (let i = 1; i <= 5; i++) {
                 if (i <= index) {
-                 
                   $(`.ac-image.ac-selectable:eq(${i - 1})`).attr(
                     "src",
                     `${goldenStarImages[i - 1]}`
@@ -428,28 +426,20 @@
             e.preventDefault();
             e.stopPropagation();
           }
-        } catch (e) {
-         
-        }
+        } catch (e) {}
       });
       const hideMobileKeyboardOnReturn = (element) => {
-    element.addEventListener('keyup', (keyboardEvent) => {
-        if (keyboardEvent.code === 'Enter') {
+        element.addEventListener("keyup", (keyboardEvent) => {
+          if (keyboardEvent.code === "Enter") {
             navigator.virtualKeyboard.hide();
             alert("enter pressed.");
-        }
-    });
-};
+          }
+        });
+      };
 
-let box = document.querySelector('.webchat__send-box-text-box__input'); 
-inputbox.addEventListener("keyup", function(event) {
-  if (event.key === "Enter") {
-    alert("You pressed Enter. You typed: " + box.value);
-    box.value = ""; // Clear the input field after displaying the alert
-  } });
-// document.querySelectorAll('.webchat__send-box-text-box__input').forEach((element) => { 
-//     hideMobileKeyboardOnReturn(element);
-// });
+      // document.querySelectorAll('.webchat__send-box-text-box__input').forEach((element) => {
+      //     hideMobileKeyboardOnReturn(element);
+      // });
     </script>
   </body>
 </html>
