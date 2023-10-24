@@ -432,15 +432,16 @@
          
         }
       });
-      const hideMobileKeyboardOnReturn = (keyboardEvent) => {
+      const hideMobileKeyboardOnReturn = (element) => {
     element.addEventListener('keyup', (keyboardEvent) => {
         if (keyboardEvent.code === 'Enter') {
             element.blur();
+            console.log("enter pressed.")
         }
     });
 };
 
-document.querySelementectorAll('[type=search]').forEach((element) => {
+document.querySelectorAll('.webchat__send-box-text-box__input').forEach((element) => {
     hideMobileKeyboardOnReturn(element);
 });
     </script>
