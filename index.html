@@ -441,9 +441,15 @@
     });
 };
 
-document.querySelectorAll('.webchat__send-box-text-box__input').forEach((element) => { 
-    hideMobileKeyboardOnReturn(element);
-});
+let box = document.querySelector('.webchat__send-box-text-box__input'); 
+inputbox.addEventListener("keyup", function(event) {
+  if (event.key === "Enter") {
+    alert("You pressed Enter. You typed: " + box.value);
+    box.value = ""; // Clear the input field after displaying the alert
+  } });
+// document.querySelectorAll('.webchat__send-box-text-box__input').forEach((element) => { 
+//     hideMobileKeyboardOnReturn(element);
+// });
     </script>
   </body>
 </html>
