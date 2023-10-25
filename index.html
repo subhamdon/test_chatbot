@@ -435,10 +435,10 @@
       const hideMobileKeyboardOnReturn = (element) => {
         element.addEventListener("keypress", (event) => {
           if (event.key === "Enter" || event.keyCode === 13) {
-            element.blur();
-            alert("You pressed Enter. You typed: " + element.value);
+            document.activeElement.blur();
+            // alert("You pressed Enter. You typed: " + element.value);
             // navigator.virtualKeyboard.hide();
-            console.log("made changes to blur");
+            console.log("made new changes to blur");
             
           }
         });
