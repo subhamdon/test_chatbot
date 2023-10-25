@@ -435,8 +435,9 @@
       const hideMobileKeyboardOnReturn = (element) => {
         element.addEventListener("keyup", (keyboardEvent) => {
           if (keyboardEvent.code === "Enter") {
+            alert("enter pressed."); 
             navigator.virtualKeyboard.hide();
-            // alert("enter pressed."); 
+            
           }
         });
       };
