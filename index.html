@@ -431,7 +431,7 @@
           }
         } catch (e) {}
       });
-      
+
       const hideMobileKeyboardOnReturn = (element) => {
         element.addEventListener("keyup", (keyboardEvent) => {
           if (keyboardEvent.code === "Enter") {
@@ -445,7 +445,7 @@
         let inputbox = document.querySelector(".webchat__send-box-text-box__input");
         hideMobileKeyboardOnReturn(inputbox);
         
-      }, 500);
+      }, 1000);
 
       
        
