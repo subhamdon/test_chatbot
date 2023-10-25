@@ -435,19 +435,9 @@
       };
 
       setTimeout(() => {
-        if ("virtualKeyboard" in navigator) {
-          navigator.virtualKeyboard.overlaysContent = true;
-
-          
-
         let inputbox = document.querySelector(
           ".webchat__send-box-text-box__input"
         );
-
-        const editor = inputbox.addEventListener("click", () => {
-            navigator.virtualKeyboard.show();
-          });
-        }
 
         hideMobileKeyboardOnReturn(inputbox);
       }, 1000);
