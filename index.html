@@ -31,7 +31,7 @@
       }
       li p {
         margin: 0;
-      } 
+      }
 
       #heading {
         background-color: #2e475d;
@@ -162,10 +162,9 @@
         }
       }
     </style>
-    <script src="https://code.jquery.com/jquery-3.6.0.js"></script> 
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
     <script>
       window.onload = () => {
-        
         let reloadBtn = document.getElementsByClassName("refresh-btn");
         reloadBtn[0].addEventListener("click", function () {
           let confirmReload = confirm("Are you sure you want to reload?");
@@ -173,14 +172,7 @@
             location.reload();
           }
         });
-
-
-     
-        
       };
-
-     
-
     </script>
   </head>
   <body>
@@ -408,7 +400,6 @@
 
         if ($(e.target).hasClass(".webchat__send-box-text-box__input")) {
           console.log("found search box");
-
         }
       });
 
@@ -439,19 +430,27 @@
             // alert("You pressed Enter. You typed: " + element.value);
             navigator.virtualKeyboard.hide();
             console.log("made new changes to blur");
-            
           }
         });
       };
 
       setTimeout(() => {
-        let inputbox = document.querySelector(".webchat__send-box-text-box__input");
-        hideMobileKeyboardOnReturn(inputbox);
-        
-      }, 1000);
+        if ("virtualKeyboard" in navigator) {
+          navigator.virtualKeyboard.overlaysContent = true;
 
-      
-       
+          
+
+        let inputbox = document.querySelector(
+          ".webchat__send-box-text-box__input"
+        );
+
+        const editor = inputbox.addEventListener("click", () => {
+            navigator.virtualKeyboard.show();
+          });
+        }
+
+        hideMobileKeyboardOnReturn(inputbox);
+      }, 1000);
     </script>
   </body>
 </html>
