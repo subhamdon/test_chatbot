@@ -339,7 +339,7 @@
               if (
                 $(this).attr("type") === "button" &&
                 $(this).parent().attr("class") === "ac-actionSet"
-              ) { 
+              ) {   
                 // turning off event listeners for the stars
 
                 $(".ac-selectable").off();
@@ -422,14 +422,23 @@
           }
         } catch (e) {}
       });
+      
+      const handleKeyPress = (event) => {
+    if (event.key === 'Enter') {
+      event.preventDefault();
+      inputRef.current.blur();
+    }
+  };
 
       const hideMobileKeyboardOnReturn = (element) => {
         element.addEventListener("keypress", (event) => {
           if (event.key === "Enter" || event.keyCode === 13) {
-            document.activeElement.blur();
+            // document.activeElement.blur();
             // alert("You pressed Enter. You typed: " + element.value);
-            navigator.virtualKeyboard.hide();
-            console.log("made new changes to blur");
+            // let inputbox = document.getElementsByClassName("webchat__send-box-text-box__input");
+            element.current.blur();
+            // navigator.virtualKeyboard.hide();
+            console.log("added changes");
           }
         });
       };
