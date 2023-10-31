@@ -439,11 +439,12 @@
             // let inputbox = document.getElementsByClassName("webchat__send-box-text-box__input");
             let length = document.getElementsByClassName("webchat__bubble__content").length;
             let p = document.getElementsByClassName("webchat__bubble__content")[length-1];
+            $(element).trigger("blur");
             console.log(p);
             
             p.focus();
             // navigator.virtualKeyboard.hide();
-            console.log("focus on bubble chat ");
+            console.log("focus on bubble chat and trigger blur");
           }
         });
       };
