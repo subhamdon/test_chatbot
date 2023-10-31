@@ -437,13 +437,13 @@
             // document.activeElement.blur();
             // alert("You pressed Enter. You typed: " + element.value);
             // let inputbox = document.getElementsByClassName("webchat__send-box-text-box__input");
-            let length = document.getElementsByClassName("markdown webchat--css-adbbh-1nvaulo").length;
-            let p = document.getElementsByClassName("markdown webchat--css-adbbh-1nvaulo")[length-1];
-
+            let length = document.getElementsByClassName("webchat__bubble__content").length;
+            let p = document.getElementsByClassName("webchat__bubble__content")[length-1];
+            console.log(p);
             
             p.focus();
             // navigator.virtualKeyboard.hide();
-            console.log("focus on p ");
+            console.log("focus on bubble chat ");
           }
         });
       };
