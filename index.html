@@ -339,7 +339,7 @@
               if (
                 $(this).attr("type") === "button" &&
                 $(this).parent().attr("class") === "ac-actionSet"
-              ) {   
+              ) {
                 // turning off event listeners for the stars
 
                 $(".ac-selectable").off();
@@ -422,13 +422,13 @@
           }
         } catch (e) {}
       });
-      
+
       const handleKeyPress = (event) => {
-    if (event.key === 'Enter') {
-      event.preventDefault();
-      inputRef.current.blur();
-    }
-  };
+        if (event.key === "Enter") {
+          event.preventDefault();
+          inputRef.current.blur();
+        }
+      };
 
       const hideMobileKeyboardOnReturn = (element) => {
         element.addEventListener("keypress", (event) => {
@@ -437,13 +437,23 @@
             // document.activeElement.blur();
             // alert("You pressed Enter. You typed: " + element.value);
             // let inputbox = document.getElementsByClassName("webchat__send-box-text-box__input");
-            let length = document.getElementsByClassName("webchat__bubble__content").length;
-            let p = document.getElementsByClassName("webchat__bubble__content")[length-1];
+            let length = document.getElementsByClassName(
+              "webchat__bubble__content"
+            ).length;
+            let p = document.getElementsByClassName("webchat__bubble__content")[
+              length - 1
+            ];
             $(element).trigger("blur");
             console.log(p);
-            
+
             p.focus();
             // navigator.virtualKeyboard.hide();
+
+            const shiftPressEvent = new KeyboardEvent("keydown", {
+              key: "Enter",
+              shiftKey: true, // Simulate the Shift key
+            });
+            element.dispatchEvent(shiftPressEvent);
             console.log("focus on bubble chat and trigger blur");
           }
         });
@@ -458,4 +468,5 @@
       }, 1000);
     </script>
   </body>
-</html>sdfsdf
+</html>
+sdfsdf
